@@ -3,6 +3,7 @@ import AppShell from "@/components/layout/AppShell";
 import { getBooks } from "@/lib/books";
 import { getProgress, getStatus } from "@/lib/reading";
 import QuoteStrip from "@/components/ui/QuoteStrip";
+import Greeting from "@/components/ui/Greeting";
 
 export default async function Home() {
   const books = await getBooks();
@@ -21,7 +22,7 @@ export default async function Home() {
       <div className="page-head page-head-row">
         <div>
           <div className="eyebrow">Your reading space</div>
-          <h1>Good day, Nikhil.</h1>
+          <Greeting />
           <div className="sub">A quiet place for the books that shape your mind.</div>
           <QuoteStrip quote="Read slowly enough for an idea to stay with you." label="Today’s reading note" />
         </div>
