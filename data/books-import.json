@@ -1,0 +1,434 @@
+[
+  {
+    "title": "Tales from Shakespeare",
+    "author": "Charles and Mary Lamb",
+    "genre": "Classic Literature",
+    "totalPages": 304,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "totalPages": 208,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Principles in Maintaining a Godly Organization",
+    "author": "K.P. Yohannan",
+    "genre": "Christianity",
+    "totalPages": 128,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "genre": "Philosophy",
+    "totalPages": 192,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Before You Open Your Bible",
+    "author": "Matt Smethurst",
+    "genre": "Christianity",
+    "totalPages": 96,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Art of Not Overthinking",
+    "author": "Shaurya Kapoor",
+    "genre": "Self-Help",
+    "totalPages": 86,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Foxe's Christian Martyrs of the World",
+    "author": "John Foxe",
+    "genre": "Christianity",
+    "totalPages": 590,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Jesus Christ: His Life and Teaching",
+    "author": "Unknown / edition-dependent",
+    "genre": "Christianity",
+    "totalPages": 300,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Unique Jesus: The Man and His Message",
+    "author": "Unknown / edition-dependent",
+    "genre": "Christianity",
+    "totalPages": 160,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Dark Psychology Secrets & Manipulation",
+    "author": "Amy Brown",
+    "genre": "Psychology",
+    "totalPages": 180,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Mountain Is You",
+    "author": "Brianna Wiest",
+    "genre": "Self-Help",
+    "totalPages": 203,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Everything Is F*cked: A Book About Hope",
+    "author": "Mark Manson",
+    "genre": "Self-Help",
+    "totalPages": 224,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "genre": "Personal Development",
+    "totalPages": 424,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The 48 Laws of Power",
+    "author": "Robert Greene",
+    "genre": "Psychology",
+    "totalPages": 452,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Richest Man in Babylon",
+    "author": "George S. Clason",
+    "genre": "Personal Finance",
+    "totalPages": 160,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "101 Ways to Boost Your Math Skills",
+    "author": "Susan Shafer",
+    "genre": "Mathematics",
+    "totalPages": 160,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Master Your Emotions",
+    "author": "Thibaut Meurisse",
+    "genre": "Self-Help",
+    "totalPages": 224,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Self-Help",
+    "totalPages": 320,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert T. Kiyosaki",
+    "genre": "Personal Finance",
+    "totalPages": 336,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "You Can Heal Your Life",
+    "author": "Louise Hay",
+    "genre": "Self-Help",
+    "totalPages": 272,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genre": "Classic Literature",
+    "totalPages": 284,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "genre": "Personal Finance",
+    "totalPages": 252,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Don't Believe Everything You Think",
+    "author": "Joseph Nguyen",
+    "genre": "Psychology",
+    "totalPages": 128,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Complete Novels of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "totalPages": 536,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Diary of a CEO",
+    "author": "Steven Bartlett",
+    "genre": "Business",
+    "totalPages": 368,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Make Your Bed",
+    "author": "William H. McRaven",
+    "genre": "Self-Help",
+    "totalPages": 106,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Power of Your Subconscious Mind",
+    "author": "Joseph Murphy",
+    "genre": "Self-Help",
+    "totalPages": 256,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Good Vibes, Good Life",
+    "author": "Vex King",
+    "genre": "Self-Help",
+    "totalPages": 320,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Art of Being Alone",
+    "author": "Renuka Gavrani",
+    "genre": "Self-Help",
+    "totalPages": 145,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Same as Ever",
+    "author": "Morgan Housel",
+    "genre": "Personal Finance",
+    "totalPages": 224,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Day by Day: Call to Mission",
+    "author": "Robert Street",
+    "genre": "Christianity",
+    "totalPages": 69,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Called to Be a Soldier: Exploring the Soldier's Covenant",
+    "author": "The Salvation Army",
+    "genre": "Christianity",
+    "totalPages": 96,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Dopamine Detox",
+    "author": "Thibaut Meurisse",
+    "genre": "Self-Help",
+    "totalPages": 80,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Called to Be God's People",
+    "author": "Robert Street",
+    "genre": "Christianity",
+    "totalPages": 141,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Stop Overthinking: 23 Techniques to Relieve Stress, Stop Negative Spirals, Declutter Your Mind, and Focus on the Present",
+    "author": "Nick Trenton",
+    "genre": "Self-Help",
+    "totalPages": 176,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Read This First: A Simple Guide to Getting the Most from the Bible",
+    "author": "Gary Millar",
+    "genre": "Christianity",
+    "totalPages": 128,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The World's Greatest Short Stories: 70 of the Finest Stories Ever Written",
+    "author": "Various Authors",
+    "genre": "Short Stories",
+    "totalPages": 480,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Ikigai: The Japanese Secret to a Long and Happy Life",
+    "author": "Héctor García and Francesc Miralles",
+    "genre": "Self-Help",
+    "totalPages": 208,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Ikigai Journey: A Practical Guide to Finding Happiness and Purpose the Japanese Way",
+    "author": "Héctor García and Francesc Miralles",
+    "genre": "Self-Help",
+    "totalPages": 224,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Republic",
+    "author": "Plato",
+    "genre": "Philosophy",
+    "totalPages": 400,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Life with Jesus: A Discipleship Course for Every Christian",
+    "author": "Tim Chester",
+    "genre": "Christianity",
+    "totalPages": 96,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Think Straight",
+    "author": "Darius Foroux",
+    "genre": "Self-Help",
+    "totalPages": 132,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Art of Spending Money: Simple Choices for a Richer Life",
+    "author": "Morgan Housel",
+    "genre": "Personal Finance",
+    "totalPages": 220,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "genre": "Personal Development",
+    "totalPages": 432,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Power of a Positive Attitude",
+    "author": "Roger Fritz",
+    "genre": "Personal Development",
+    "totalPages": 160,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "genre": "Self-Help",
+    "totalPages": 224,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "genre": "Personal Development",
+    "totalPages": 288,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  },
+  {
+    "title": "Today's Story of Jesus",
+    "author": "Unknown / edition-dependent",
+    "genre": "Christianity",
+    "totalPages": 128,
+    "pagesRead": 0,
+    "favorite": false,
+    "cover": ""
+  }
+]
