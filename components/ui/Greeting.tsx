@@ -15,8 +15,6 @@ export default function Greeting() {
   useEffect(() => {
     const update = () => setGreeting(getGreeting(new Date().getHours()));
     update();
-
-    // Re-check every minute so the greeting changes while the app is open.
     const timer = window.setInterval(update, 60_000);
     return () => window.clearInterval(timer);
   }, []);
