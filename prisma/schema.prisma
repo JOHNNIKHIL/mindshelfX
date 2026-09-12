@@ -1,2 +1,25 @@
-// Reserved for the PostgreSQL migration.
-// The current local development store is data/books.json.
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Book {
+  id         String   @id @default(uuid())
+  title      String
+  author     String
+  genre      String
+  totalPages Int
+  pagesRead  Int      @default(0)
+  favorite   Boolean  @default(false)
+  cover      String   @default("")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([genre])
+  @@index([favorite])
+  @@index([createdAt])
+}
