@@ -1,5 +1,6 @@
 import AppShell from "@/components/layout/AppShell";
 import { getBooks } from "@/lib/books";
+import QuoteStrip from "@/components/ui/QuoteStrip";
 
 export default async function Analytics() {
   const books = await getBooks();
@@ -42,6 +43,8 @@ export default async function Analytics() {
           </div>
         </div>
       </div>
+
+      <QuoteStrip quote="Progress is quiet. A page today becomes a finished book tomorrow." label="Keep going" />
 
       <div className="stats">
         <div className="stat">

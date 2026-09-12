@@ -1,6 +1,7 @@
 import AppShell from "@/components/layout/AppShell";
 import LibraryClient from "@/components/books/LibraryClient";
 import { getBooks } from "@/lib/books";
+import QuoteStrip from "@/components/ui/QuoteStrip";
 
 export default async function Library() {
   const books = await getBooks();
@@ -20,6 +21,8 @@ export default async function Library() {
           + Add book
         </a>
       </div>
+
+      <QuoteStrip quote="A library is not a list of books. It is a map of the ideas you chose to keep." label="Your shelf, your ideas" />
 
       <LibraryClient initialBooks={books} />
     </AppShell>

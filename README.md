@@ -1,8 +1,33 @@
-# MindShelf DB/Vercel Build Fix
+# MindShelf UI Touch-Up
 
-This patch fixes the cover API so it no longer tries to write to Vercel's
-read-only filesystem. Covers are temporarily returned as data URLs and stored
-with the Book record in PostgreSQL.
+This patch is for the current PostgreSQL/Prisma MindShelf project.
 
-Also run the dependency commands in README-commands.txt. Prisma must be
-generated during Vercel's install step.
+## Apply
+Extract this ZIP into the root of your MindShelf project and allow it to overwrite the existing files.
+
+Files changed:
+- `app/page.tsx`
+- `app/library/page.tsx`
+- `app/analytics/page.tsx`
+- `app/globals.css`
+- `components/ui/QuoteStrip.tsx`
+
+## What changed
+- Home greeting is now **Good day, Nikhil.**
+- Added tasteful entrance animations and staggered book-card animations.
+- Added subtle cover lift/hover depth.
+- Added animated primary-button shine.
+- Added small favorite-button interaction.
+- Added responsive quote strips to Home, Library and Analytics.
+- Added a `prefers-reduced-motion` fallback for accessibility.
+- No database schema or book data is changed.
+- No `.env` or secrets are included.
+
+## Test
+After extraction:
+`npm run dev`
+
+Then check:
+- `/`
+- `/library`
+- `/analytics`
