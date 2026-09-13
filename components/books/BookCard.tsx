@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { Book } from "@/lib/types";
 import { progress, status } from "@/lib/reading";
+import OptimizedCover from "./OptimizedCover";
 
 export default function BookCard({
   book,
@@ -41,7 +42,7 @@ export default function BookCard({
       <Link href={`/book/${book.id}`} className="book-link">
         <div className="book-cover">
           {book.cover ? (
-            <img src={book.cover} alt="" className="cover-image" />
+            <OptimizedCover src={book.cover} />
           ) : (
             <div className="cover-fallback">
               <span>{book.title}</span>

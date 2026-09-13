@@ -4,6 +4,7 @@ import { getBooks } from "@/lib/books";
 import { getProgress, getStatus } from "@/lib/reading";
 import QuoteStrip from "@/components/ui/QuoteStrip";
 import Greeting from "@/components/ui/Greeting";
+import OptimizedCover from "@/components/books/OptimizedCover";
 
 export default async function Home() {
   const books = await getBooks();
@@ -67,7 +68,10 @@ export default async function Home() {
               <Link href={`/book/${book.id}`} className="book-card" key={book.id}>
                 <div className="book-cover">
                   {book.cover ? (
-                    <img src={book.cover} className="cover-image" alt="" />
+                    <OptimizedCover
+                      src={book.cover}
+                      sizes="(max-width: 700px) 45vw, (max-width: 1100px) 20vw, 180px"
+                    />
                   ) : (
                     <div className="cover-fallback">
                       <span>{book.title}</span>
@@ -115,7 +119,7 @@ export default async function Home() {
               <Link href={`/book/${book.id}`} className="book-card" key={book.id}>
                 <div className="book-cover">
                   {book.cover ? (
-                    <img src={book.cover} className="cover-image" alt="" />
+                    <OptimizedCover src={book.cover} />
                   ) : (
                     <div className="cover-fallback">
                       <span>{book.title}</span>
@@ -140,7 +144,7 @@ export default async function Home() {
               <Link href={`/book/${book.id}`} className="book-card" key={book.id}>
                 <div className="book-cover">
                   {book.cover ? (
-                    <img src={book.cover} className="cover-image" alt="" />
+                    <OptimizedCover src={book.cover} />
                   ) : (
                     <div className="cover-fallback">
                       <span>{book.title}</span>
