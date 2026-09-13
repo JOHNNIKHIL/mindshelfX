@@ -1,0 +1,40 @@
+/* MindShelf white-theme card fix
+   The app theme is controlled by html[data-theme], not OS preference.
+   This prevents dark OS settings from turning reading cards black in Light mode.
+*/
+
+html[data-theme="light"] .reading-feature-card,
+html:not([data-theme="dark"]) .reading-feature-card {
+  background: var(--surface, #ffffff) !important;
+  border-color: var(--line, #e5e5df) !important;
+  color: var(--text, #171716);
+  box-shadow: 0 8px 26px rgba(20,20,30,.035);
+}
+
+html[data-theme="light"] .reading-feature-hero,
+html:not([data-theme="dark"]) .reading-feature-hero {
+  background: linear-gradient(145deg, #ffffff, #f8f7fb) !important;
+}
+
+html[data-theme="light"] .reading-feature-card:hover,
+html:not([data-theme="dark"]) .reading-feature-card:hover {
+  border-color: color-mix(in srgb, var(--line, #ddd) 65%, currentColor 10%) !important;
+  box-shadow: 0 14px 34px rgba(20,20,30,.07);
+}
+
+/* Explicit dark theme only */
+html[data-theme="dark"] .reading-feature-card {
+  background: rgba(25, 27, 32, .78) !important;
+  border-color: rgba(255,255,255,.075) !important;
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(0,0,0,.16);
+}
+
+html[data-theme="dark"] .reading-feature-hero {
+  background: linear-gradient(145deg, rgba(31,33,39,.94), rgba(25,27,32,.90)) !important;
+}
+
+html[data-theme="dark"] .reading-feature-card:hover {
+  border-color: rgba(255,255,255,.12) !important;
+  box-shadow: 0 15px 34px rgba(0,0,0,.22);
+}
