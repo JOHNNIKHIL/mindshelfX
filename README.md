@@ -1,7 +1,15 @@
-# MindShelf — Library UX & Polish
+# MindShelf Combined UI Update
 
-Extract into the MindShelf project root and overwrite the included files.
+This single patch combines:
+- Library search/filter/sort UX from the previous polish pass
+- dynamic time-based greeting for Nikhil
+- smoother interactions and subtle gradients/shine
+- persistent Light/Dark theme switcher
+- mobile-friendly theme control
+- reduced-motion accessibility support
 
-Includes search, genre/status filters, sorting, persistent grid/compact view, clear/reset controls, responsive toolbar, micro-interactions, and the live local-time greeting. No database/schema/book data changes.
+No database, Prisma schema, book data, or API logic is changed.
 
-Run `npm run dev`, then test `/library` and `/`.
+Extract over the existing MindShelf project and overwrite files.
+Then run:
+npm run dev
