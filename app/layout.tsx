@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./visual-polish.css";
 import ThemeInitializer from "@/components/ui/ThemeInitializer";
 
 export const metadata = {

@@ -1,0 +1,40 @@
+
+/* MindShelf — subtle gradient refinement
+   Loaded after globals.css so the existing UI remains intact. */
+
+body {
+  background:
+    radial-gradient(circle at 92% -8%, color-mix(in srgb, var(--ms-accent-1) 3.5%, transparent), transparent 28rem),
+    var(--bg);
+}
+
+.quote-strip {
+  background:
+    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--ms-accent-1) 4%, transparent), transparent 18rem),
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--surface) 99%, var(--ms-accent-1)),
+      var(--surface)
+    );
+  border-color: color-mix(in srgb, var(--ms-accent-1) 9%, var(--line));
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--ms-accent-1) 3%, transparent);
+}
+
+.quote-strip::after {
+  border-color: color-mix(in srgb, var(--ms-accent-1) 9%, transparent);
+  box-shadow: 0 0 0 18px color-mix(in srgb, var(--ms-accent-1) 1.5%, transparent);
+}
+
+.cover-fallback {
+  background:
+    radial-gradient(circle at 18% 16%, color-mix(in srgb, var(--ms-accent-1) 4%, transparent), transparent 48%),
+    linear-gradient(145deg, var(--surface), var(--surface-soft));
+}
+
+.book-card .book-cover {
+  box-shadow: 0 8px 22px rgba(20,20,25,.045);
+}
+
+.stat:hover,
+.panel:hover {
+  box-shadow: 0 16px 38px color-mix(in srgb, var(--ms-accent-1) 5%, transparent);
+}
