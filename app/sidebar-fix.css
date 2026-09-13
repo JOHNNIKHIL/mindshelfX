@@ -1,0 +1,21 @@
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon {
+  width: 20px !important;
+  min-width: 20px !important;
+  height: 20px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20px;
+}
+
+.nav-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+  display: block;
+}

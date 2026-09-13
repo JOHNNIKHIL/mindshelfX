@@ -436,33 +436,49 @@ label select {
 }
 
 
-/* Fix for the UI cohesion pass: constrain inline navigation SVGs. */
-.nav a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* ===== Favorite heart contrast — final =====
+   BookCard and Book Detail already switch between ♡ and ♥.
+   Force both states to use the intended red treatment. */
+.favorite-btn:not(.is-favorite) {
+  color: #e5484d !important;
+  background: rgba(255, 255, 255, 0.96);
+  -webkit-text-stroke: 0.35px currentColor;
 }
 
-.nav-icon {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.favorite-btn:not(.is-favorite):hover {
+  color: #d63d42 !important;
+  background: rgba(255, 255, 255, 0.98);
+  transform: scale(1.06);
 }
 
-.nav-icon svg {
-  width: 20px;
-  height: 20px;
-  display: block;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.favorite-btn.is-favorite {
+  color: #e5484d !important;
+  background: rgba(255, 255, 255, 0.96);
+  -webkit-text-stroke: 0;
 }
 
-.nav a.active::before {
-  left: 0;
+.favorite-btn.is-favorite:hover {
+  color: #d63d42 !important;
+  transform: scale(1.06);
+}
+
+/* Detail-page heart */
+.heart-large:not(.is-favorite) {
+  color: #e5484d !important;
+  -webkit-text-stroke: 0.35px currentColor;
+}
+
+.heart-large:not(.is-favorite):hover {
+  color: #d63d42 !important;
+}
+
+.heart-large.is-favorite {
+  color: #e5484d !important;
+  background: var(--surface);
+  border-color: color-mix(in srgb, #e5484d 28%, var(--line));
+  -webkit-text-stroke: 0;
+}
+
+.heart-large.is-favorite:hover {
+  color: #d63d42 !important;
 }

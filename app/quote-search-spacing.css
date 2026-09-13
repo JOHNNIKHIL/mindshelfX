@@ -1,0 +1,15 @@
+/* MindShelf — small library spacing refinement
+   Adds breathing room between the quote strip and the library search/filter toolbar.
+   Loaded after globals.css, so existing styling remains untouched. */
+
+@media (min-width: 701px) {
+  .library-toolbar {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .library-toolbar {
+    margin-top: 14px;
+  }
+}
