@@ -24,9 +24,11 @@ export default async function Home() {
           <div className="eyebrow">Your reading space</div>
           <Greeting />
           <div className="sub">A quiet place for the books that shape your mind.</div>
-          <QuoteStrip quote="Read slowly enough for an idea to stay with you." label="Today’s reading note" />
+          <QuoteStrip
+            quote="Read slowly enough for an idea to stay with you."
+            label="Today’s reading note"
+          />
         </div>
-        <Link href="/add" className="btn primary">+ Add book</Link>
       </div>
 
       <div className="stats">
@@ -38,7 +40,9 @@ export default async function Home() {
         <div className="stat">
           <div className="stat-label">COMPLETED</div>
           <div className="stat-value">{completed}</div>
-          <div className="stat-small">{books.length ? Math.round((completed / books.length) * 100) : 0}% of your books</div>
+          <div className="stat-small">
+            {books.length ? Math.round((completed / books.length) * 100) : 0}% of your books
+          </div>
         </div>
         <div className="stat">
           <div className="stat-label">PAGES READ</div>
@@ -62,12 +66,26 @@ export default async function Home() {
             {continueReading.map((book) => (
               <Link href={`/book/${book.id}`} className="book-card" key={book.id}>
                 <div className="book-cover">
-                  {book.cover ? <img src={book.cover} className="cover-image" alt="" /> : <div className="cover-fallback"><span>{book.title}</span></div>}
+                  {book.cover ? (
+                    <img src={book.cover} className="cover-image" alt="" />
+                  ) : (
+                    <div className="cover-fallback">
+                      <span>{book.title}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="book-title">{book.title}</div>
                 <div className="book-author">{book.author}</div>
-                <div className="progress-track"><div className="progress-fill" style={{width:`${getProgress(book)}%`}} /></div>
-                <div className="progress-meta"><span>{book.pagesRead} / {book.totalPages}</span><span>{getProgress(book)}%</span></div>
+                <div className="progress-track">
+                  <div
+                    className="progress-fill"
+                    style={{ width: `${getProgress(book)}%` }}
+                  />
+                </div>
+                <div className="progress-meta">
+                  <span>{book.pagesRead} / {book.totalPages}</span>
+                  <span>{getProgress(book)}%</span>
+                </div>
               </Link>
             ))}
           </div>
@@ -78,21 +96,31 @@ export default async function Home() {
         <div className="empty-state">
           <strong>Your library is empty.</strong>
           <span>Add your first book to get started.</span>
-          <Link href="/add" className="btn primary" style={{marginTop:12}}>Add your first book</Link>
+          <Link href="/add" className="btn primary" style={{ marginTop: 12 }}>
+            Add your first book
+          </Link>
         </div>
       )}
 
       {recent.length > 0 && (
-        <section className="section" style={{marginTop:42}}>
+        <section className="section" style={{ marginTop: 42 }}>
           <div className="section-head">
             <h2>Recently added</h2>
-            <Link href="/library" className="sub">View library →</Link>
+            <Link href="/library" className="sub">
+              View library →
+            </Link>
           </div>
           <div className="book-grid">
             {recent.map((book) => (
               <Link href={`/book/${book.id}`} className="book-card" key={book.id}>
                 <div className="book-cover">
-                  {book.cover ? <img src={book.cover} className="cover-image" alt="" /> : <div className="cover-fallback"><span>{book.title}</span></div>}
+                  {book.cover ? (
+                    <img src={book.cover} className="cover-image" alt="" />
+                  ) : (
+                    <div className="cover-fallback">
+                      <span>{book.title}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="book-title">{book.title}</div>
                 <div className="book-author">{book.author}</div>
@@ -103,7 +131,7 @@ export default async function Home() {
       )}
 
       {favorites.length > 0 && (
-        <section className="section" style={{marginTop:42}}>
+        <section className="section" style={{ marginTop: 42 }}>
           <div className="section-head">
             <h2>Favorites</h2>
           </div>
@@ -111,7 +139,13 @@ export default async function Home() {
             {favorites.map((book) => (
               <Link href={`/book/${book.id}`} className="book-card" key={book.id}>
                 <div className="book-cover">
-                  {book.cover ? <img src={book.cover} className="cover-image" alt="" /> : <div className="cover-fallback"><span>{book.title}</span></div>}
+                  {book.cover ? (
+                    <img src={book.cover} className="cover-image" alt="" />
+                  ) : (
+                    <div className="cover-fallback">
+                      <span>{book.title}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="book-title">{book.title}</div>
                 <div className="book-author">{book.author}</div>

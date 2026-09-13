@@ -16,13 +16,12 @@ export default async function Library() {
             {books.length} {books.length === 1 ? "book" : "books"} in your personal library.
           </div>
         </div>
-
-        <a href="/add" className="btn primary">
-          + Add book
-        </a>
       </div>
 
-      <QuoteStrip quote="A library is not a list of books. It is a map of the ideas you chose to keep." label="Your shelf, your ideas" />
+      <QuoteStrip
+        quote="A library is not a list of books. It is a map of the ideas you chose to keep."
+        label="Your shelf, your ideas"
+      />
 
       <LibraryClient initialBooks={books} />
     </AppShell>

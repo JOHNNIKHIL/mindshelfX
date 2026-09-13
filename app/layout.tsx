@@ -1,4 +1,5 @@
 import "./globals.css";
+import ThemeInitializer from "@/components/ui/ThemeInitializer";
 
 export const metadata = {
   title: "MindShelf",
@@ -10,7 +11,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeInitializer />
+        {children}
+      </body>
     </html>
   );
 }

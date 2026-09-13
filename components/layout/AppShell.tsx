@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { headers } from "next/headers";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 
 export default async function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = (await headers()).get("x-pathname") ?? "";
@@ -14,7 +15,11 @@ export default async function AppShell({ children }: { children: React.ReactNode
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <div className="brand">Mind<span>Shelf</span></div>
+        <div className="sidebar-top">
+          <div className="brand">Mind<span>Shelf</span></div>
+          <ThemeSwitcher />
+        </div>
+
         <nav className="nav">
           {nav.map((item) => (
             <Link
