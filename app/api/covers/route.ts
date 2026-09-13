@@ -1,48 +1,36 @@
+import { put } from "@vercel/blob";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+const MAX_BYTES = 8 * 1024 * 1024;
+const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
+
 export async function POST(request: Request) {
   try {
-    const { dataUrl } = await request.json();
+    const formData = await request.formData();
+    const file = formData.get("file");
 
-    if (typeof dataUrl !== "string") {
-      return NextResponse.json(
-        { error: "No image supplied." },
-        { status: 400 }
-      );
+    if (!(file instanceof File)) {
+      return NextResponse.json({ error: "No cover image supplied." }, { status: 400 });
+    }
+    if (!ALLOWED_TYPES.has(file.type)) {
+      return NextResponse.json({ error: "Unsupported cover image. Use JPG, PNG or WebP." }, { status: 400 });
+    }
+    if (file.size > MAX_BYTES) {
+      return NextResponse.json({ error: "Cover must be smaller than 8 MB." }, { status: 400 });
     }
 
-    // Covers are temporarily stored directly in PostgreSQL as a data URL.
-    // This avoids Vercel's read-only filesystem. We will move covers to
-    // object storage in the next storage step.
-    const match = dataUrl.match(
-      /^data:(image\/(?:jpeg|jpg|png|webp));base64,(.+)$/
-    );
+    const extension = file.type === "image/jpeg" ? "jpg" : file.type === "image/png" ? "png" : "webp";
+    const baseName = file.name.replace(/\.[^/.]+$/, "").trim().replace(/[^a-zA-Z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 100) || "book-cover";
+    const pathname = `covers/${baseName}.${extension}`;
 
-    if (!match) {
-      return NextResponse.json(
-        { error: "Unsupported cover image. Use JPG, PNG or WebP." },
-        { status: 400 }
-      );
-    }
+    const blob = await put(pathname, file, { access: "public", addRandomSuffix: true });
 
-    // Keep database records reasonably sized during this interim storage phase.
-    const base64Payload = match[2];
-    const approximateBytes = Math.floor((base64Payload.length * 3) / 4);
-
-    if (approximateBytes > 2 * 1024 * 1024) {
-      return NextResponse.json(
-        { error: "For now, covers must be smaller than 2 MB." },
-        { status: 400 }
-      );
-    }
-
-    return NextResponse.json({ url: dataUrl }, { status: 201 });
+    return NextResponse.json({ url: blob.url, pathname: blob.pathname }, { status: 201 });
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Could not upload cover.";
-
-    return NextResponse.json({ error: message }, { status: 400 });
+    console.error("Cover upload failed:", error);
+    const message = error instanceof Error ? error.message : "Could not upload cover.";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
