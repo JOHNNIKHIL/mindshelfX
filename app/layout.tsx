@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./visual-polish.css";
 import "./reading-features.css";
+import "./book-guide.css";
 import ThemeInitializer from "@/components/ui/ThemeInitializer";
 
 export const metadata = {

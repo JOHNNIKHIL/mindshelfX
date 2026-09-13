@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import type { Book } from "@/lib/types";
 import { getProgress, getStatus } from "@/lib/reading";
 import OptimizedCover from "./OptimizedCover";
+import BookGuide from "./BookGuide";
+import { getBookGuide } from "@/lib/book-guides";
 
 function SimilarBooks({ books }: { books: Book[] }) {
   if (!books.length) return null;
@@ -127,6 +129,7 @@ export default function BookDetailClient({
           </div>
         </div>
       </div>
+      {getBookGuide(book.title) && <BookGuide guide={getBookGuide(book.title)!} />}
       <SimilarBooks books={similarBooks} />
     </>
   );
