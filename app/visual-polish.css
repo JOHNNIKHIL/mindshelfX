@@ -50,6 +50,17 @@ body {
   font-style: normal;
 }
 
+/* Favorites: make saved books immediately distinguishable. */
+.favorite-btn.is-favorite {
+  color: #e5484d;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.favorite-btn.is-favorite:hover {
+  color: #d63d42;
+  transform: scale(1.06);
+}
+
 @media (max-width: 520px) {
   .quote-strip {
     margin-top: 22px;
