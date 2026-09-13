@@ -20,18 +20,29 @@ export default function BookCard({
   async function toggleFavorite(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     e.stopPropagation();
+    if (saving) return;
+
+    const previous = book.favorite;
+    const next = !previous;
+
+    // Optimistic UI: make the interaction feel instant.
+    onChange?.({ ...book, favorite: next });
     setSaving(true);
 
     try {
       const response = await fetch(`/api/books/${book.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ favorite: !book.favorite }),
+        body: JSON.stringify({ favorite: next }),
       });
 
-      if (response.ok) {
-        onChange?.(await response.json());
-      }
+      if (!response.ok) throw new Error("Favorite update failed.");
+
+      const updated = await response.json();
+      onChange?.(updated);
+    } catch {
+      // Roll back if the server update failed.
+      onChange?.({ ...book, favorite: previous });
     } finally {
       setSaving(false);
     }

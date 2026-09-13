@@ -13,7 +13,17 @@ export default function BookDetailClient({ initialBook }: { initialBook: Book })
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  async function update(patch: object) {
+  async function update(patch: Partial<Pick<Book, "favorite" | "pagesRead">>) {
+    if (saving) return false;
+
+    const previousBook = book;
+    const optimisticBook = { ...book, ...patch };
+
+    // Optimistic UI: reflect the change before the network round trip.
+    setBook(optimisticBook);
+    if (patch.pagesRead !== undefined) {
+      setPages(String(patch.pagesRead));
+    }
     setSaving(true);
     setMessage("");
     setError("");
@@ -28,6 +38,8 @@ export default function BookDetailClient({ initialBook }: { initialBook: Book })
       const data = await res.json();
 
       if (!res.ok) {
+        setBook(previousBook);
+        setPages(String(previousBook.pagesRead));
         setError(data.error || "Could not save.");
         return false;
       }
@@ -36,9 +48,13 @@ export default function BookDetailClient({ initialBook }: { initialBook: Book })
       setPages(String(data.pagesRead));
       setMessage("Saved");
       window.setTimeout(() => setMessage(""), 1600);
-      router.refresh();
+
+      // The API response is already the authoritative updated book.
+      // Avoid a second full route refresh/database round trip.
       return true;
     } catch {
+      setBook(previousBook);
+      setPages(String(previousBook.pagesRead));
       setError("Could not connect to the server. Please try again.");
       return false;
     } finally {
@@ -62,7 +78,6 @@ export default function BookDetailClient({ initialBook }: { initialBook: Book })
       const res = await fetch(`/api/books/${book.id}`, { method: "DELETE", cache: "no-store" });
       if (res.ok) {
         router.push("/library");
-        router.refresh();
       } else {
         const data = await res.json();
         setError(data.error || "Could not delete book.");
