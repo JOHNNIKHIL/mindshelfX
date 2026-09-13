@@ -434,3 +434,35 @@ label select {
     flex: 1;
   }
 }
+
+
+/* Fix for the UI cohesion pass: constrain inline navigation SVGs. */
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav a.active::before {
+  left: 0;
+}
